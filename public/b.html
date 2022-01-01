@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+        let myDOM=(
+            <div>
+                <div>DIV-1</div><br></br>  {/* <br> must be paired.  */}
+                <div>DIV-2</div>
+            </div>
+
+        );
+
+        ReactDOM.render(myDOM,document.getElementById("demoReact"));
+    </script>
+</body>
+</html>
+
