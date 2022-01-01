@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>setInterval</title>
+<script src="../js/react.development.js"></script>
+<script src="../js/react-dom.development.js"></script>
+<script src="../js/babel.min.js"></script>
+</head>
+<body>
+
+<div id="example">
+    <div id="id1"></div>
+    <div id="id2"></div>
+</div>
+<script type="text/babel">
+function tick() {
+  const element1 = (
+    <div>
+      <h2>现在是 {new Date().toLocaleTimeString('ko-KR')}</h2>
+      <h2>现在是 {new Date().toString()}</h2>
+    </div>
+  );
+  const element2 = (
+    <div>
+      <h2>现在是 {new Date().toUTCString()}</h2> {/* 注释 */} 
+    </div>
+  );
+
+  ReactDOM.render(
+    element1,
+    document.getElementById('id1')  // example to div1 or 2
+  );
+  ReactDOM.render(
+    element2,
+    document.getElementById('id2')  // example to div1 or 2
+  );
+}
+ 
+setInterval(tick, 1000);  //以上实例通过 setInterval() 方法，每秒钟调用一次 ReactDOM.render()。
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
+</script>
+
+</body>
+</html>
+<!-- 
+https://www.runoob.com/react/react-rendering-elements.html
+// 注释要看上下文，是否在JSX代码里面。
+-->
