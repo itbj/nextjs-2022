@@ -19,9 +19,14 @@
  </script>
 ```
 
-### []()
+### [千锋web前端教程：04 jsx语法进阶使用](https://youtu.be/tdmyawesFJE?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=1536)
 
-```shell
+```html
+    <style>
+        .demoStyle{
+            color:red;
+        }
+    </style>
 
 ```
 
