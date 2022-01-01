@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+        //https://youtu.be/tdmyawesFJE?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=395
+        let text="您好";
+        let num = 2021;
+
+        function fun(obj){
+            return `Name is: ${obj.name} -- Age is: ${obj.age}`
+
+        };
+
+        let user={
+            name: "Tom",
+            age: 18
+        };
+
+        let myDOM=(
+            <div>
+                <div>{text}</div><br></br>  {/* <br> must be paired.  */}
+                <div>{num+1}</div>
+                <div>{fun(user)}</div>
+            </div>
+
+        );
+
+        ReactDOM.render(myDOM,document.getElementById("demoReact"));
+    </script>
+</body>
+</html>
+
