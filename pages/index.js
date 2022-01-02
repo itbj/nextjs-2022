@@ -61,12 +61,26 @@ export default function Home() {
             <h3>Tiger &rarr;</h3>
             <p>演示</p>
           </a>
+          <a
+            href="/bulb.html"
+            className={styles.card}
+          >
+            <h3>Bulb &rarr;</h3>
+            <p>演示</p>
+          </a>
+          <a
+            href="/loony/index.html"
+            className={styles.card}
+          >
+            <h3>loony &rarr;</h3>
+            <p>演示</p>
+          </a>
         </div>
       </main>
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
