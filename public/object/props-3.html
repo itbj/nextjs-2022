@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style>
+        .demoStyle{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+
+        let linkHome="/"
+        // props 对外接口，不能修改自身的props!! 类& 无状态 componet.
+
+        let MyCom =(props)=>{
+            return(
+                <div style={{display:bool?"block":"none"}}>
+                    {props.arr.map((v,i)=>{
+                        return (
+                            <p key={i}>{i}-{v}</p>
+                        )
+                    })
+                    }
+                </div>
+            )
+        }
+        
+        let dataArr=["Hippopotamus","Sweasel","Tiger","Pig","Puppy"]
+        let bool=true
+        let Com =(props)=>{
+            return(
+                <div>
+                    <h2 onClick={()=>{bool=!bool;console.log(bool);render()}}>I'm father.</h2><MyCom arr={dataArr}/>
+                </div>
+            )
+        }
+
+
+        function render(){
+            ReactDOM.render(<Com />,document.getElementById("demoReact")) 
+        }
+        
+        render();
+
+    </script>
+<!--
+    https://youtu.be/1cMg4-mnSHs?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=277
+   <br></br><a href={linkHome}>Back</a>
+   https://youtu.be/1cMg4-mnSHs?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=437
+-->
+
+</body>
+</html>
