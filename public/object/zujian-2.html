@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style>
+        .demoStyle{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+
+        let linkHome="/"
+
+        function MyDomA(){
+            return(
+                <div>我是第1号组件。</div>
+            )                                                          
+        }
+    
+        function MyDomB(){
+            return(
+                <div>我是第2号组件。</div>
+            )                                                          
+        }
+        function MyDomC(){
+            return(
+                <div>我是第3号组件。</div>
+            )                                                          
+        }
+        function MyDomD(){
+            return(
+                <div>我是第4号组件。</div>
+            )                                                          
+        }
+        
+        // let com=<div><MyDomA/><MyDomB/><MyDomC/><MyDomD/></div>      
+        // ReactDOM.render(com,document.getElementById("demoReact")) 
+        function Com(){
+            return(<div><MyDomA/><MyDomC/><MyDomB/><MyDomD/><br></br><a href={linkHome}>Back</a></div>)
+        }
+        ReactDOM.render(<Com/>,document.getElementById("demoReact"))
+
+    </script>
+<!--
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=622 
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=681
+   <br></br><a href={linkHome}>Back</a>
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=892
+-->
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style>
+        .demoStyle{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+
+        let linkHome="/"
+        // 类组件, 首字母大写！！
+        class MyCom extends React.Component{
+            render(){
+                return (
+                    <div>类组件</div>
+                )
+            }
+        }
+
+        //let com=<MyCom/>
+        let com = <div><MyCom/><br></br><a href={linkHome}>Back</a><p><MyCom/></p><MyCom/></div>
+        ReactDOM.render(com,document.getElementById("demoReact")) 
+
+    </script>
+<!--
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=622 
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=681
+   <br></br><a href={linkHome}>Back</a>
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=1095
+-->
+
+</body>
+</html>

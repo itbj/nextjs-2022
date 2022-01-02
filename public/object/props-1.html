@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style>
+        .demoStyle{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+
+        let linkHome="/"
+        // props 对外接口，不能修改自身的props!! 类& 无状态 component.
+        //
+        function Com(props){
+            return(
+                <div>I'm a stateless component. outside data are:{props.text}{props.year}<br></br><a href={linkHome}>Back</a></div>
+            )
+        }
+        //let com=<MyCom/>
+        //let com = <div><a href={linkHome}>Back</a></div>
+        //ReactDOM.render(com,document.getElementById("demoReact")) 
+        //ReactDOM.render(<Com/>,document.getElementById("demoReact")) 
+        //ReactDOM.render(<Com text="ouside data."/>,document.getElementById("demoReact")) 
+        // let _data="Hello 2022"
+        // ReactDOM.render(<Com text={_data}/>,document.getElementById("demoReact")) 
+        //ReactDOM.render(<Com text="<br></br><a href={linkHome}>Back</a>"/>,document.getElementById("demoReact")) 
+        //I'm a stateless component. outside data are:<br></br><a href={linkHome}>Back</a>
+
+        let _data={
+            text:"Hello ",
+            year: 2022
+        }
+        ReactDOM.render(<Com {..._data}/>,document.getElementById("demoReact")) 
+    </script>
+<!--
+    https://youtu.be/QQSD1GnHV7A?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=145
+    <br></br><a href={linkHome}>Back</a>
+    I'm a stateless component. outside data are:<br></br><a href={linkHome}>Back</a>
+    put the back html code in function return code!!!
+    https://youtu.be/QQSD1GnHV7A?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=303
+    let _data="hello"
+    https://youtu.be/QQSD1GnHV7A?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=378
+    let _data=obj{}, and use ... operator of ES6 ?
+    https://youtu.be/QQSD1GnHV7A?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=509
+    ReactDOM.render(<Com {..._data}/>,document.getElementById("demoReact")) 
+-->
+
+</body>
+</html>

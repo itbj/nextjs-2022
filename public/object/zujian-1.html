@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style>
+        .demoStyle{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+
+        let linkHome="/"
+
+        function MyDom(){
+            return(
+                <div>我是无状态组件。<br></br><a href={linkHome}>Back</a></div>
+            )                                                           // {/* 2 divs, error?*/}
+        }
+    
+        //let com = <MyDom/>
+        let com=<div><MyDom/><MyDom/><MyDom/><MyDom/></div>      // Multi-ojects, must be in a div pairs. Otherwise error.
+
+        ReactDOM.render(com,document.getElementById("demoReact")) // demoReact, demoRact !!!
+
+    </script>
+<!--
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=622 
+   https://youtu.be/pLKfq98jT7U?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=681
+-->
+
+</body>
+</html>
