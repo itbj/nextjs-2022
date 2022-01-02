@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Testing</title>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <style>
+        .demoStyle{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demoReact">
+
+    </div>    
+    <script type="text/babel">
+
+        let linkHome="/"
+        let com = <div><a href={linkHome}>Back</a></div>
+
+        class Com extends React.Component{
+            constructor(props){
+                super(props)
+                this.state={
+                    name: "Tom",
+                }
+            }
+
+            render(){
+                return(
+                    // this.setState() 异步的，state 改变后，React 自动渲染网页。
+                    <div>I'm a class component. --- {this.state.name}<br></br>
+                        <button onClick={()=>{this.setState({name:"Jerry"})}}>Click Me to change data.</button>
+                        <br></br><a href={linkHome}>Back</a>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<Com />,document.getElementById("demoReact")) 
+
+    </script>
+<!--
+    https://youtu.be/3VogCIk4Tqk?list=PLwDQt7s1o9J7u0lzzlFQYx5sJ7GvZkA4i&t=554
+   <br></br><a href={linkHome}>Back</a>
+-->
+
+</body>
+</html>
