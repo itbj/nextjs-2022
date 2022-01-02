@@ -45,6 +45,22 @@ export default function Home() {
             <h3>Deploy &rarr;</h3>
             <p>部署</p>
           </a>
+
+          <a
+            href="/tusk/tusk.html"
+            className={styles.card}
+          >
+            <h3>Tusk &rarr;</h3>
+            <p>演示</p>
+          </a>
+
+          <a
+            href="/tiger/a.html"
+            className={styles.card}
+          >
+            <h3>Tiger &rarr;</h3>
+            <p>演示</p>
+          </a>
         </div>
       </main>
 
