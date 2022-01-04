@@ -75,6 +75,20 @@ export default function Home() {
             <h3>loony &rarr;</h3>
             <p>演示</p>
           </a>
+          <a
+            href="/dragon/index.html"
+            className={styles.card}
+          >
+            <h3>Dragon &rarr;</h3>
+            <p>演示</p>
+          </a>
+          <a
+            href="/long/long.html"
+            className={styles.card}
+          >
+            <h3>Long🐉 &rarr;</h3>
+            <p>演示</p>
+          </a>
         </div>
       </main>
 
